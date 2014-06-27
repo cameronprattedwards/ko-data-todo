@@ -15,7 +15,7 @@
 				<span data-bind="text: message() || 'Double Click to add a Message'" title="Double click to edit message"></span>
 				<input type="text" data-bind="value: message" />
 				<span class="loading" data-bind="visible: isLoading">Loading</span>
-				<button type="button" class="close" data-bind="click: (function () { console.log($parentContext.component); return $parentContext.component.remove.bind($parentContext.component) }())">
+				<button type="button" class="close" data-bind="click: $parentContext.component.remove.bind($parentContext.component)">
 					<span aria-hidden="true">&times;</span>
 					<span class="sr-only">Close</span>
 				</button>

@@ -63,8 +63,6 @@ define(["knockout", "persistence/repos/ToDoRepo", "jquery"], function (ko, ToDoR
 	    	var component = new ToDoComponent(ko.utils.unwrapObservable(valueAccessor()), element),
 	    		innerBindingContext = bindingContext.extend({ component: component });
 
-	    	console.log(component, innerBindingContext);
-
 	    	ko.applyBindingsToDescendants(innerBindingContext, element);
 
 	    	return { controlsDescendantBindings: true };

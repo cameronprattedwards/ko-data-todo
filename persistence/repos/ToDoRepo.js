@@ -3,7 +3,9 @@ define(["ko-data/repo/ajax/Repo", "domain/entities/ToDo"], function (Repo, ToDo)
 		entity: ToDo,
 		entityName: "todo",
 		pluralEntityName: "todos",
-		baseUrl: "/api"
+		baseUrl: "/api",
+		poll: true,
+		pollBuffer: 250
 	});
 
 	return new ToDoRepo();

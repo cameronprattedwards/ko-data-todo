@@ -18,6 +18,8 @@ var todos = [
 	}
 ];
 
+console.log("router:", router);
+
 router.param("todo", function (req, res, next, id) {
 	console.log("got todo", id);
 	var matches = todos.filter(function (todo) {
@@ -45,7 +47,7 @@ router.get("/todos", function (req, res) {
 router.post("/todos", function (req, res) {
 	console.log("post", req.body);
 	req.body.due = new Date(req.body.due);
-	req.body.id = todos[todos.length - 1].id + 1;
+	req.body.id = todos.length ? todos[todos.length - 1].id + 1 : 0;
 	req.body.message = req.body.message || "";
 	if (!req.body.hasOwnProperty("isComplete"))
 		req.body.isComplete = false;

@@ -23,6 +23,7 @@ require([
 	"app/components/toDoComponent", 
 	"app/components/toDosComponent"
 	], function (ToDo, ko, ToDoRepo, where) {
+	window.ko = ko;
 	var vm = {
 		todos: ToDoRepo.where()
 	};
