@@ -1,0 +1,50 @@
+h2 input {
+	display: none;
+}
+
+h2.editing input {
+	display: initial;
+}
+
+h2 span {
+	cursor: pointer;
+}
+
+h2.editing span {
+	display: none;
+}
+
+.todo {
+	display: inline-block;
+	width: 100%;
+}
+
+ul {
+	padding-left: 0px;
+	text-align: left;
+	border-bottom: 1px #dddddd solid;
+}
+
+ul li {
+	padding: 10px;
+}
+
+body {
+	text-align: center;
+}
+
+h2 span.loading {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.link {
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.link:hover {
+	text-decoration: underline;
+	background-color: #dddddd;
+}
