@@ -1,0 +1,30 @@
+{
+  "name": "ko-data-todo",
+  "version": "0.0.0",
+  "description": "An example app for ko-data",
+  "main": "server-main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cameronprattedwards/ko-data-todo.git"
+  },
+  "keywords": [
+    "example",
+    "data",
+    "persistence",
+    "ddd",
+    "todo",
+    "mvc"
+  ],
+  "author": "Cameron Edwards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cameronprattedwards/ko-data-todo/issues"
+  },
+  "homepage": "https://github.com/cameronprattedwards/ko-data-todo",
+  "dependencies": {
+    "express": "3.4.0"
+  }
+}
