@@ -36,7 +36,6 @@ define(["knockout", "persistence/repos/ToDoRepo", "jquery"], function (ko, ToDoR
     			editing = true;
     			$h2.addClass("editing");
     			$input.focus();
-    			console.log($input.is(":focus"));
     		}
     	});
 
