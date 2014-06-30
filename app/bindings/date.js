@@ -34,28 +34,5 @@ define(["knockout", "jquery", "jquery-ui"], function (ko, $) {
 	            $el.datepicker("setDate", value);
 	        }
 	    }
-	};	
-	// ko.bindingHandlers.date = {
-	//     init: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
-	//     	var val = valueAccessor(),
-	//     		date;
-	//     	$(element).datepicker({
-	//     		onSelect: function () {
-	//     			console.log('selected');
-	//     			if (ko.isObservable(val)) {
-	//     				val(date = $(this).datepicker("getDate"));
-	//     			}
-	//     		}
-	//     	});
-	//     	$(element).datepicker("setDate", ko.utils.unwrapObservable(val));
-	//     	if (ko.isObservable(val)) {
-	//     		val.subscribe(function (value) {
-	//     			if (value !== date)
-	//     				$(element).datepicker("setDate", value);
-	//     		});
-	//     	}
-	//     },
-	//     update: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
-	//     }
-	// };
+	};
 });
