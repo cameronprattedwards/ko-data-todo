@@ -5,7 +5,7 @@ define(["ko-data/entity/Entity", "ko-data/type/Number", "ko-data/type/String", "
 			var _self = this;
 
 			this.pastDue = ko.computed(function () {
-				return !_self.isComplete() && ((_self.due() - new Date()) < 0);
+				return !_self.isComplete() && ((_self.due() - new Date() - 20) < 0);
 			});
 
 			this.dangerZone = ko.computed(function () {
