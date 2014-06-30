@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KO Data To Do List</title>
+	<link href="app/jquery-ui.min.css" rel="stylesheet" />
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="app/todo.css" rel="stylesheet" />
+	<script src="lib/require.js" data-main="sockets-main.js"></script>
+</head>
+<body data-bind="toDosComponent: $data">
+	<h1>KO Data To Do List</h1>
+	<ul data-bind="foreach: todos">
+		<li data-bind="toDoComponent: $data, css: { 'bg-danger': pastDue, 'bg-success': isComplete, 'bg-warning': dangerZone }" class="todo">
+			<h2>
+				<span data-bind="text: message() || 'Double Click to add a Message'" title="Double click to edit message"></span>
+				<input type="text" data-bind="value: message" />
+				<span class="loading" data-bind="visible: isLoading">Loading</span>
+				<button type="button" class="close" data-bind="click: $parentContext.component.remove.bind($parentContext.component)">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span>
+				</button>
+			</h2>
+			<label>Due Date: <input type="text" data-bind="date: due" /></label>
+			<label>Completed: <input type="checkbox" data-bind="checked: isComplete" /></label>
+		</li>
+	</ul>
+	<p class="link text-primary" data-bind="click: component.addNew.bind(component)">+ Add New To Do</p>
+</body>
+</html>
