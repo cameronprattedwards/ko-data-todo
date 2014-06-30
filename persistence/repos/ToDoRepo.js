@@ -1,4 +1,4 @@
-define(["ko-data/repo/ajax/Repo", "domain/entities/ToDo"], function (Repo, ToDo) {
+define(["ko-data/repo", "domain/entities/ToDo"], function (Repo, ToDo) {
 	var ToDoRepo = Repo.extend({
 		entity: ToDo,
 		entityName: "todo",
