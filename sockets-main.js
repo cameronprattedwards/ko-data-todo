@@ -3,7 +3,8 @@ require.config({
 		"knockout": "lib/knockout-3.1.0",
 		"jquery": "lib/jquery-2.1.1.min",
 		"ko-data": "lib/ko-data",
-		"jquery-ui": "lib/jquery-ui.min"
+		"jquery-ui": "lib/jquery-ui.min",
+		"io": "socket.io/socket.io.js"
 	},
 	shim: {
 		"jquery": {
@@ -16,7 +17,7 @@ require.config({
 
 require(["ko-data/config"], function (config, ToDo, ko, ToDoRepo, where) {
 	config({
-		repo: "ko-data/repo/ajax/Repo"
+		repo: "ko-data/repo/sockets/Repo"
 	});
 
 	require([
